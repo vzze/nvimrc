@@ -15,3 +15,9 @@ V.add_pairs = {
     { "<", ">", before="%a" }
 }
 ```
+
+#### Prequisite
+```
+npm i -g neovim
+pip install pynvim
+```
