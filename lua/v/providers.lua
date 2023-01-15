@@ -1,6 +1,6 @@
 V.providers = {
-    ['nodejs'] = true,
-    ['python3'] = true,
+    ['node'] = false,
+    ['python3'] = false,
     ['perl'] = false,
     ['ruby'] = false,
 }
