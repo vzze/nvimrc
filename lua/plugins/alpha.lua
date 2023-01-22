@@ -84,7 +84,7 @@ return {
         dashboard.section.header.val = art
 
         dashboard.section.buttons.val = {
-            dashboard.button("r  ", "  Restore", ":RestoreSession<CR>"),
+            dashboard.button("r  ", "  Restore", "<cmd>lua require(\"persistence\").load()<cr>"),
             dashboard.button("SPC t f  ", "  Files"),
             dashboard.button("SPC t g  ", "  Grep Time"),
         }
