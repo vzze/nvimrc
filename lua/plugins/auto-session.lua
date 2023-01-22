@@ -1,6 +1,6 @@
 return {
     'rmagatti/auto-session',
-    opt = true,
+    lazy = true,
     cmd = { "SaveSession", "RestoreSession" },
     config = function()
         require("auto-session").setup({

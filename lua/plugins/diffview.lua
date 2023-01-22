@@ -1,6 +1,6 @@
 return {
     'sindrets/diffview.nvim',
-    opt = true,
+    lazy = true,
     cmd = { "DiffviewOpen", "DiffviewFileHistory", "DiffviewRefresh" },
     config = function()
         require("diffview").setup({

@@ -1,7 +1,6 @@
 return {
     'numToStr/FTerm.nvim',
-    opt = true,
-    module = "FTerm",
+    lazy = true,
     config = function()
         if vim.fn.has("unix") == 1 then
             require("FTerm").setup({ cmd = _G.V.terminal.unix })

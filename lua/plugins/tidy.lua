@@ -1,7 +1,7 @@
 return {
     'mcauley-penney/tidy.nvim',
     event = "BufWritePre",
-    opt = true,
+    lazy = true,
     config = function ()
         require("tidy").setup()
     end

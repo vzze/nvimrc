@@ -6,7 +6,7 @@ V.mappings.global = {
         ["tn"]          = { ":tabnew<CR>"                                 , "New Tab"              },
         ["td"]          = { ":tabclose<CR>"                               , "Close Tab"            },
         ["te"]          = { "<cmd>lua require(\"FTerm\").toggle()<CR>"    , "Terminal"             },
-        ["tf"]          = { ":Dirbuf <Bar> :DirbufSync<CR>"               , "File Editor"          },
+        ["tf"]          = { ":NeoTreeFocusToggle<CR>"                     , "File Editor"          },
 
         ["s"]           = { name = "+splits"                                                       },
         ["sq"]          = { ":q<CR>"                                      , "Close Split"          },
@@ -25,7 +25,7 @@ V.mappings.global = {
         ["<leader>z"]   = { ":ZenMode<CR>"                                , "Zen Mode"             },
 
         ["<leader>u"]   = { name = "+update"                                                       },
-        ["<leader>up"]  = { ":PackerSync<CR>"                             , "Plugins"              },
+        ["<leader>up"]  = { ":Lazy update<CR>"                            , "Plugins"              },
         ["<leader>ul"]  = { ":CocUpdate<CR>"                              , "Language Servers"     },
         ["<leader>ut"]  = { ":TSUpdate all<CR>"                           , "Treesitter"           },
 

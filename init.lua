@@ -13,30 +13,42 @@ require("v.vim_settings")
 require("v.mappings")
 require("v.mappings.global")
 require("v.mappings.git")
-require("v.lualine")
-require("v.lualine.theme")
+require("v.statusline")
+require("v.statusline.theme")
 
 require("config")
 
-local ensure_packer = function()
-    local install_path = vim.fn.stdpath('data') .. '/site/pack/packer/start/packer.nvim'
-    ---@diagnostic disable-next-line: missing-parameter
-    if vim.fn.empty(vim.fn.glob(install_path)) > 0 then
-        vim.fn.system({'git', 'clone', '--depth', '1', 'https://github.com/wbthomason/packer.nvim', install_path})
-        vim.cmd [[packadd packer.nvim]]
-        return true
-    end
-    return false
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
 end
 
-local packer_bootstrap = ensure_packer()
+vim.opt.rtp:prepend(lazypath)
 
-local packer = require("packer")
-
-packer.startup(require("plugins").setup)
-
-if packer_bootstrap then
-   packer.sync()
-end
+require("lazy").setup(require("plugins"), {
+    ui = {
+        icons = {
+            cmd = "cmd",
+            config = "cfg",
+            event = "ev",
+            ft = "ft",
+            init = "ini",
+            keys = "key",
+            plugin = "plug",
+            runtime = "rt",
+            source = "src",
+            start = "st",
+            task = "tk",
+            lazy = "zZ",
+        },
+    },
+})
 
 require("settings")

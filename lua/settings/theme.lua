@@ -36,6 +36,7 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         hi DiffText ctermfg=6 ctermbg=NONE guifg=6 guibg=NONE                             |
         hi StatusLine cterm=NONE ctermfg=13 ctermbg=NONE                                  |
         hi StatusLineNC cterm=NONE ctermfg=13 ctermbg=NONE                                |
+        hi TabLineFill cterm=NONE gui=NONE                                                |
         hi Twilight ctermfg=8
     ]]
 })

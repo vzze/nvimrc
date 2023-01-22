@@ -51,7 +51,13 @@ return {
                         always_visible = false,
                     }
                 },
-                lualine_y = { 'filename', 'encoding', 'filesize', 'progress' },
+                lualine_y = {
+                    {
+                        require("lazy.status").updates,
+                        cond = require("lazy.status").has_updates
+                    },
+                    'filename', 'encoding', 'filesize', 'progress'
+                },
                 lualine_z = { 'location' }
             },
             sections = {

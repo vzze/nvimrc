@@ -1,6 +1,7 @@
 return {
     'goolord/alpha-nvim',
     config = function()
+        vim.api.nvim_command([[autocmd User AlphaReady set showtabline=0 | autocmd BufUnload <buffer> set showtabline=2]])
         local art = {
             [[    `-'`                                ~;    ]],
             [[     ~~~-`                           'x#@x    ]],
@@ -33,6 +34,7 @@ return {
             [[            -ox*N#%$88$W&8$%W%*..-'           ]],
             [[          `.'    .<a%WW@W#a<.      ```        ]],
         }
+
         local dashboard = require("alpha.themes.dashboard")
 
         if _G.V.splash_screen.info == true then
@@ -40,7 +42,14 @@ return {
 
             local left   = "V1602 "
             local middle = ""
-            local right  = "Plugins: " .. tostring(#vim.tbl_keys(packer_plugins or {}))
+            local right
+
+            if require("lazy.status").has_updates() then
+                right = require("lazy.status").updates()
+            else
+                right = "Plugins: " .. tostring(#require("plugins"))
+            end
+
             local final  = ""
 
             if time.hour < 10 then middle = middle .. "0" .. time.hour .. ':'

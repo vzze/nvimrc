@@ -1,7 +1,8 @@
 return {
     'neoclide/coc.nvim',
-    run = ":CocUpdate",
+    build = ":CocUpdate",
     branch = 'release',
+    event = "VeryLazy",
     config = function()
         _Internal.CheckBackSpace = function()
             local col = vim.fn.col('.') - 1
