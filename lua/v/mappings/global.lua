@@ -1,3 +1,7 @@
+local wrap = function(str)
+    return vim.api.nvim_replace_termcodes(str, true, true , true)
+end
+
 V.mappings.global = {
     normal = {
         ["t"]           = { name = "+tabs"                                                           },
@@ -13,19 +17,19 @@ V.mappings.global = {
         ["sv"]          = { "<cmd>wincmd v<CR>"                             , "Vertical"             },
         ["ss"]          = { "<cmd>wincmd s<CR>"                             , "Horizontal"           },
 
-        ["sl"]          = { "<cmd>wincmd |<CR>"                             , "Max Out Width"        },
+        ["so"]          = { "<cmd>wincmd |<CR>"                             , "Max Out Width"        },
 
-        ["s'"]          = { "<cmd>wincmd 16><CR>"                           , "Increase W16"         },
-        ["s;"]          = { "<cmd>wincmd 16<<CR>"                           , "Decrease W16"         },
-        ["s."]          = { "<cmd>wincmd 8><CR>"                            , "Increase W8"          },
-        ["s,"]          = { "<cmd>wincmd 8<<CR>"                            , "Decrease W8"          },
+        ["sl"]          = { "<cmd>wincmd 16><CR>"                           , "Increase W16"         },
+        ["sh"]          = { "<cmd>wincmd 16<<CR>"                           , "Decrease W16"         },
+        ["sL"]          = { "<cmd>wincmd 8><CR>"                            , "Increase W8"          },
+        ["sH"]          = { "<cmd>wincmd 8<<CR>"                            , "Decrease W8"          },
 
-        ["sh"]          = { "<cmd>wincmd _<CR>"                             , "Max Out Height"       },
+        ["si"]          = { "<cmd>wincmd _<CR>"                             , "Max Out Height"       },
 
-        ["s]"]          = { "<cmd>wincmd 16+<CR>"                           , "Increase H16"         },
-        ["s["]          = { "<cmd>wincmd 16-<CR>"                           , "Decrease H16"         },
-        ["s+"]          = { "<cmd>wincmd 8+<CR>"                            , "Increase H8"          },
-        ["s-"]          = { "<cmd>wincmd 8-<CR>"                            , "Decrease H8"          },
+        ["sk"]          = { "<cmd>wincmd 16+<CR>"                           , "Increase H16"         },
+        ["sj"]          = { "<cmd>wincmd 16-<CR>"                           , "Decrease H16"         },
+        ["sK"]          = { "<cmd>wincmd 8+<CR>"                            , "Increase H8"          },
+        ["sJ"]          = { "<cmd>wincmd 8-<CR>"                            , "Decrease H8"          },
 
         ["s="]          = { "<cmd>wincmd =<CR>"                             , "Equalize"             },
         ["sw"]          = { "<cmd>wincmd w<CR>"                             , "Cycle"                },
@@ -101,6 +105,6 @@ V.mappings.global = {
         },
     },
     terminal = {
-        ["<Esc>"]       = { vim.api.nvim_replace_termcodes("<C-\\><C-n>", true, true , true), "Term Normal Mode" }
+        ["<Esc>"]       = { wrap("<C-\\><C-n>"), "Term Normal Mode" }
     }
 }
