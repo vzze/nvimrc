@@ -30,10 +30,14 @@ vim.api.nvim_create_autocmd("ColorScheme", {
         hi PreProc cterm=italic ctermfg=12 gui=italic guifg=12                            |
         hi Todo ctermfg=11 ctermbg=NONE guifg=11 guibg=NONE                               |
         hi Visual ctermfg=NONE ctermbg=8 guifg=NONE guibg=8                               |
-        hi DiffAdd ctermfg=2 ctermbg=NONE guifg=2 guibg=NONE                              |
-        hi DiffChange ctermfg=5 ctermbg=NONE guifg=5 guibg=NONE                           |
-        hi DiffDelete ctermfg=1 ctermbg=NONE guifg=1 guibg=NONE                           |
-        hi DiffText ctermfg=6 ctermbg=NONE guifg=6 guibg=NONE                             |
+        hi GSDiffAdd ctermfg=2 ctermbg=NONE guifg=2 guibg=NONE                            |
+        hi GSDiffChange ctermfg=5 ctermbg=NONE guifg=5 guibg=NONE                         |
+        hi GSDiffDelete ctermfg=1 ctermbg=NONE guifg=1 guibg=NONE                         |
+        hi GSDiffText ctermfg=6 ctermbg=NONE guifg=6 guibg=NONE                           |
+        hi DiffAdd ctermfg=15 ctermbg=2 guifg=15 guibg=2                                  |
+        hi DiffChange ctermfg=15 ctermbg=5 guifg=15 guibg=5                               |
+        hi DiffDelete ctermfg=15 ctermbg=1 guifg=15 guibg=1                               |
+        hi DiffText ctermfg=15 ctermbg=6 guifg=15 guibg=6                                 |
         hi StatusLine cterm=NONE ctermfg=13 ctermbg=NONE                                  |
         hi StatusLineNC cterm=NONE ctermfg=13 ctermbg=NONE                                |
         hi TabLineFill cterm=NONE gui=NONE                                                |

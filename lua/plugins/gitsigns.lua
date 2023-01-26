@@ -11,11 +11,11 @@ return {
                 wk.register(V.mappings.git.terminal, { mode = "t", prefix = "", buffer = bufnr, silent = true, noremap = true, nowait = false })
             end,
             signs = {
-                add          = { hl = 'DiffAdd'       , text = '+'  , numhl='DiffAdd'         , linehl='DiffAdd'       },
-                change       = { hl = 'DiffChange'    , text = '~'  , numhl='DiffChange'      , linehl='DiffChange'    },
-                delete       = { hl = 'DiffDelete'    , text = '_'  , numhl='DiffDelete'      , linehl='DiffDelete'    },
-                topdelete    = { hl = 'DiffDelete'    , text = '‾'  , numhl='DiffDelete'      , linehl='DiffDelete'    },
-                changedelete = { hl = 'DiffText'      , text = '/'  , numhl='DiffText'        , linehl='DiffText'      },
+                add          = { hl = 'GSDiffAdd'     , text = '+'  , numhl='GSDiffAdd'       , linehl='GSDiffAdd'     },
+                change       = { hl = 'GSDiffChange'  , text = '~'  , numhl='GSDiffChange'    , linehl='GSDiffChange'  },
+                delete       = { hl = 'GSDiffDelete'  , text = '_'  , numhl='GSDiffDelete'    , linehl='GSDiffDelete'  },
+                topdelete    = { hl = 'GSDiffDelete'  , text = '‾'  , numhl='GSDiffDelete'    , linehl='GSDiffDelete'  },
+                changedelete = { hl = 'GSDiffText'    , text = '/'  , numhl='GSDiffText'      , linehl='GSDiffText'    },
                 untracked    = { hl = 'GitSignsAdd'   , text = '┆'  , numhl='GitSignsAddNr'   , linehl='GitSignsAddLn' },
             },
         })

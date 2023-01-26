@@ -6,6 +6,7 @@ V.mappings.git = {
         ["<leader>gs"]  = { "<cmd>Gitsigns stage_buffer<CR>"              , "Stage Buffer"         },
         ["<leader>gu"]  = { "<cmd>Gitsigns undo_stage_hunk<CR>"           , "Undo Stage Hunk"      },
         ["<leader>gr"]  = { "<cmd>Gitsigns reset_buffer<CR>"              , "Reset Buffer"         },
+        ["<leader>gh"]  = { "<cmd>Gitsigns reset_hunk<CR>"                , "Reset Hunk"           },
         ["<leader>gp"]  = { "<cmd>Gitsigns preview_hunk<CR>"              , "Preview Hunk"         },
         ["<leader>gb"]  = { "<cmd>Gitsigns blame_line<CR>"                , "Blame Line"           },
         ["<leader>gB"]  = { "<cmd>Gitsigns toggle_current_line_blame<CR>" , "Current Blame Line"   },

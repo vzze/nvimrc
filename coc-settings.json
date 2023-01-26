@@ -25,5 +25,5 @@
     "diagnostic.hintSign": "h",
     "diagnostic.errorSign": "!",
     "diagnostic.warningSign": ">>",
-    "diagnostic.infoSign": "?",
+    "diagnostic.infoSign": "?"
 }

@@ -44,11 +44,7 @@ return {
             local middle = ""
             local right
 
-            if require("lazy.status").has_updates() then
-                right = require("lazy.status").updates()
-            else
-                right = "Plugins: " .. tostring(#require("plugins"))
-            end
+            right = "Plugins: " .. tostring(#require("plugins"))
 
             local final  = ""
 

@@ -42,7 +42,7 @@ V.mappings.global = {
         ["<leader>l"]   = { "<cmd>Lazy<CR>"                                 , "Plugin Manager"       },
 
         ["<leader>u"]   = { name = "+update"                                                         },
-        ["<leader>up"]  = { "<cmd>Lazy update<CR>"                          , "Plugins"              },
+        ["<leader>up"]  = { "<cmd>Lazy sync<CR>"                            , "Plugins"              },
         ["<leader>ul"]  = { "<cmd>CocUpdate<CR>"                            , "Language Servers"     },
         ["<leader>ut"]  = { "<cmd>TSUpdate all<CR>"                         , "Treesitter"           },
 
