@@ -24,6 +24,7 @@ local M = {
     require("plugins.FTerm"),
     require("plugins.comment"),
     require("plugins.telescope"),
+    require("plugins.cmdl"),
     require("plugins.alpha")
 }
 
