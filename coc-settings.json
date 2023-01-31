@@ -10,6 +10,8 @@
 
     "powershell.integratedConsole.showOnStartup": false,
 
+    "rust-analyzer.enable": true,
+
     "suggest.virtualText": true,
 
     "inlayHint.enable": true,
