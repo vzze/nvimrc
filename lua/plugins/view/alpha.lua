@@ -44,7 +44,10 @@ return {
             local middle = ""
             local right
 
-            right = "Plugins: " .. tostring(#require("plugins"))
+            right = "Plugins: " .. tostring(
+                #require("plugins.misc") + #require("plugins.util") + #require("plugins.general") +
+                #require("plugins.git") + #require("plugins.view") + #require("plugins.lsp")
+            )
 
             local final  = ""
 
