@@ -24,7 +24,8 @@ V.vim_settings = {
     sessionoptions = {
         "blank", "buffers", "curdir", "folds", "help", "tabpages", "winsize", "winpos", "terminal"
     },
-    foldmethod = "indent",
+    foldmethod = "expr",
+    foldexpr = "nvim_treesitter#foldexpr()",
     foldlevelstart = -1,
     foldcolumn = "1",
     laststatus = 1,
