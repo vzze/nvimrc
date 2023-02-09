@@ -17,6 +17,8 @@ V.vim_settings = {
     backup = false,
     ruler = false,
     writebackup = false,
+    cursorline = false,
+    cursorcolumn = false,
     fillchars = {
         stl = ' ', stlnc = ' ', vert = ' '
     },
